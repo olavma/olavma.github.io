@@ -1,0 +1,27 @@
+.center {
+    text-align: center;
+}
+.background {
+    background-color: aqua;
+}
+.navA {
+    font-size: 20px;
+    color: green;
+    padding: 1.5%;
+    text-decoration: none;
+}
+
+.navA:hover {
+    color: darkgreen;
+    background-color: black;
+}
+
+.navB {
+    color: orange;
+    text-decoration: none;
+}
+
+.navB:hover {
+    color: darkorange;
+    background-color: rgb(38, 38, 38);
+}

@@ -1,0 +1,79 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import '../../styles/main.css';
+import '../../styles/navigation.css';
+import '../../styles/project.css';
+import Footer from '../../components/Footer.astro';
+import projects from '../../data/projects.json';
+
+export function getStaticPaths() {
+  return projects.map(project => ({
+    params: { id: String(project.id) } // Astro requiere string
+  }));
+}
+
+const { id } = Astro.params;
+const project = projects.find(p => String(p.id) === id);
+---
+<Layout title={project ? project.title : "Proyecto no definido"}>
+    <nav class="instructions center">
+		<a href="../" class="navA">Home</a>
+		<a href="../proyectos" class="navA">Proyectos</a>
+	</nav>
+    <main>
+        {project ? (
+            <section id="proyecto">
+                <h4>{project.title}</h4>
+                <figure class="portada">
+                    <img src={project.logo} alt={project.logoAlt} />
+                </figure>
+                <article class="sinopsis">
+                    <h4>Sinopsis</h4>
+                    <p>{project.body}</p>
+                </article>
+                {project.instructions && (
+                    <article class="sinopsis">
+                        <h4>Instrucciones</h4>
+                        <p id="instructions" set:html={project.instructions}></p>
+                    </article>
+                )}
+                <article class="language">
+                    <h4>Idiomas</h4>
+                    <p>Puedes leerlo en: <span id="idioma">{project.lang}</span></p>
+                </article>
+                <a href={project.github} class="astro-button" target="_blank">Más info</a>
+                {project.play && <a href={project.play} class="astro-button">Ver</a>}
+            </section>
+        ) : (
+            <section id="proyecto">
+                <h4>Proyecto no definido</h4>
+                <p>No existe información de este proyecto.</p>
+            </section>
+        )}
+    </main>
+    <Footer />
+</Layout>
+
+<!-- <script src="../../scripts/getProject.js"></script> -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        getInstructions();
+    })
+
+    function getInstructions() {
+        const instructions = document.getElementById("instructions");
+        const text = instructions?.innerHTML;
+        const paras = text?.split('-YND-');
+        
+        if(instructions && paras) {
+            instructions.innerHTML = '';
+            paras.forEach(para => {
+                const p = document.createElement('p');
+                p.innerHTML = para;
+                instructions.appendChild(p);                
+            });
+        } else {
+            console.error('Element with id "instructions" not found')
+        }
+    }
+</script>

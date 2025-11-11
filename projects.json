@@ -1,0 +1,35 @@
+[
+    {
+        "id": 1,
+        "title": "Proyecto Troncal - Wordle",
+        "logo":"https://raw.githubusercontent.com/olavma/Resources/main/Portfolio/Wordle.webp",
+        "logoAlt": "Logo del Proyecto Troncal - Wordle",
+        "body": "Proyecto troncal para replicar el juego de Wordle en un terminal usando C#.",
+        "lang": "Castellano, Catalan, Ingles",
+        "href":"projects/1",
+        "github": "https://github.com/olavma/ProjecteTroncal_Wordle"	
+    },
+    {
+        "id": 2,
+        "title": "Game Car - JS",
+        "logo":"https://raw.githubusercontent.com/olavma/Resources/0a2b9af06b08c398a4481f00459bbc9d12cf2c48/Portfolio/carGame.webp",
+        "logoAlt": "Logo del Juego del Coche - JS",
+        "body": "Juego del coche realizado con HTML, CSS y JS para aprender sobre la POO (Programacion Orientada a Objetos).",
+        "lang": "Castellano",
+        "href":"projects/2",
+        "github": "https://github.com/olavma/JSCarGame",
+        "play": "https://olavma.github.io/JSCarGame"
+    },
+    {
+        "id": 3,
+        "title": "QUIZ - JS (PROYECTO FINAL DE DAMV1: JUEGO PERDIDO)",
+        "logo":"https://raw.githubusercontent.com/olavma/Resources/main/Portfolio/quiz.webp",
+        "logoAlt": "Logo del Juego del Coche - JS",
+        "body": "Minijuego que no se pudo lograr para el proyecto Final de de DAMV",
+        "lang": "Castellano",
+        "href":"projects/3",
+        "github": "https://github.com/olavma/JuegatonDAMv1A-LostGame",
+        "play": "https://olavma.github.io/JuegatonDAMv1A-LostGame/"
+    }
+  ]
+  

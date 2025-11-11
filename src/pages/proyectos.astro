@@ -1,0 +1,31 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Footer from "../components/Footer.astro";
+import Project from "../components/Project.astro";
+import '../styles/main.css'
+import '../styles/navigation.css'
+
+import projects from '../data/projects.json';
+---
+
+<Layout title="Proyectos de OlavMa">
+    <nav class="instructions center">
+		<a href="./" class="navA">Home</a>
+		<a href="./proyectos" class="navA">Proyectos</a>
+	</nav>
+    <main>
+        <ul id="project-list" class="link-card-grid" role="list">
+            {projects.map((project: { title: string; logo: string; logoAlt: string; body: string; lang: string; href: string; }) => (
+                <Project 
+                    title={project.title}
+                    logo={project.logo}
+                    logoAlt={project.logoAlt}
+                    body={project.body}
+                    lang={project.lang}
+                    href={project.href}
+                />
+            ))}
+        </ul>
+    </main>
+    <Footer />
+</Layout>

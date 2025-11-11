@@ -1,0 +1,23 @@
+---
+import Layout from "../layouts/Layout.astro";
+import '../styles/main.css';
+---
+
+<Layout title="Error 404: Not Found">
+    <main>
+        <h1 class="text-gradient">Error 404: Not Found</h1>
+        <p>La pagina que buscabas no se ha encontrado. Por favor regrese a la <a href="/">pagina de inicio</a></p>
+    </main>
+</Layout>
+
+<style>
+    a {
+        color: orange;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: darkorange;
+        background-color: rgb(38, 38, 38);
+    }
+</style>

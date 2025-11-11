@@ -1,0 +1,40 @@
+#proyecto {
+    text-align: center;
+}
+
+#idioma {
+    color: red;
+}
+
+h4 {
+    color: darkorange;
+}
+
+.sinopsis, .language {
+    margin-top: 10%;
+}
+
+.astro-button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    background-color: #1e3a4e; /* Color azul oscuro */
+    border-radius: 8px;
+    text-decoration: none;
+    border: 2px solid #00bcd4; /* Borde azul claro */
+    transition: background-color 0.3s, border-color 0.3s, transform 0.3s;
+}
+
+.astro-button:hover {
+    background-color: #00bcd4; /* Azul claro en hover */
+    border-color: #1e3a4e; /* Cambiar borde en hover */
+    transform: scale(1.05); /* Efecto de aumento */
+}
+
+.astro-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 188, 212, 0.5); /* Sombra de enfoque azul claro */
+}

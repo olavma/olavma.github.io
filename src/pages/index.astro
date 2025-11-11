@@ -1,0 +1,71 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LaboralCard from '../components/LaboralCard.astro';
+import Project from '../components/Project.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/navigation.css'
+import '../styles/main.css'
+
+import { Image } from 'astro:assets';
+const imageURL = "https://media.licdn.com/dms/image/D4D03AQEX_0h_-0TIiQ/profile-displayphoto-shrink_200_200/0/1685899188120?e=2147483647&v=beta&t=Ez6I5gTODwtQg8NvY36MFotWJ9p4V6GidpnHjRT0V-U"
+---
+
+<Layout title="Portfolio - Olav Martos Aceña">
+	<nav class="instructions center">
+		<a href="./" class="navA">Home</a>
+		<!-- <a href="./curriculum-vitae" class="navA">CV</a> -->
+		<a href="./proyectos" class="navA">Proyectos</a>
+	</nav>
+	<main>
+		<Image class="face" src={imageURL} alt="Profile Picture" width={600} height={400} />
+		<p class="instructions">
+			Hey, mi nombre es <strong>Olav Martos Aceña</strong>
+			<br />
+			Soy un estudiante de informática que reside en Barcelona, España
+		</p>
+
+		<h2>
+			<svg class="size-8" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M3 7m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"></path><path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2"></path><path d="M12 12l0 .01"></path><path d="M3 13a20 20 0 0 0 18 0"></path></svg>
+			Experiencia Laboral
+		</h2>
+		<ul role="list" class="link-card-grid">
+			<LaboralCard
+				title="Videogame Beta-Tester"
+				body="Fui un Beta-Tester para el juego Point&Click 3 minutes to midnight"
+				location='Scarecrow Studio'
+				time='Octubre 2023 - Marzo 2024'
+				href='https://scarecrow-studio.com/'
+			/>
+			<LaboralCard
+				title="Ayudante de Profesor CompeTIC"
+				body="Ayudante del profesor de informática con sus clases a los distintos cursos de CompeTIC, junto a ayudar con otras tareas informáticas en el CFA"
+				location='Canyelles CFA'
+				time='Diciembre 2021 - Mayo 2022'
+				href='https://agora.xtec.cat/cfacanyelles/'
+			/>
+		</ul>
+		<h2>
+			<svg class="size-7" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M7 8l-4 4l4 4"></path><path d="M17 8l4 4l-4 4"></path><path d="M14 4l-4 16"></path></svg>
+			Algunos Proyectos
+		</h2>
+		<ul role="list" class="link-card-grid">
+			<Project
+				title='Proyecto Troncal - Wordle'
+				logo='https://raw.githubusercontent.com/olavma/Resources/main/Portfolio/Wordle.webp'
+				logoAlt='Logo del Proyecto Troncal - Wordle'
+				body='Proyecto Troncal con el objetivo de replicar el juego Wordle en un terminal usando C#.'
+				lang='Castellano, Catalan, Ingles'
+				href='projects/1'	
+			/>
+			<Project 
+				title='Game Car - JS'
+				logo='https://raw.githubusercontent.com/olavma/Resources/0a2b9af06b08c398a4481f00459bbc9d12cf2c48/Portfolio/carGame.webp'
+				logoAlt='Logo del Juego del Coche - JS'
+				body='Juego realizado con HTML, CSS y JS para aprender sobre POO (Programación Orientada a Objetos).'
+				lang='Castellano'
+				href='projects/2'
+			/>
+		</ul>
+	</main>
+	<Footer />
+</Layout>
