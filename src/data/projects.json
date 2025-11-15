@@ -34,25 +34,70 @@
     {
         "id": 4,
         "title": "Proyecto Final SMIX M04 - Bash Script",
-        "logo":"https://raw.githubusercontent.com/olavma/Resources/main/Portfolio/bash.webp",
+        "logo":"TODO",
         "logoAlt": "Logo del Proyecto Final del Modulo 4 de SMIX",
         "body": "Proyecto Final para la clase de Sistemas Operativos en Linea realizado para SMIX en primer año de Grado Medio",
-        "lang": "Uknown",
+        "lang": "TODO",
         "href":"projects/4",
         "github": "https://github.com/olavma/PracticaFinal-Bash",
-        "play": "https://olavma.github.io/PracticaFinal-Bash/",
+        "play": "TODO",
         "instructions": "¡Atención! Este script solo puede ser usado en un entorno Linux ya puede ser usando una maquina host con una distribución de Linux con un entorno de escritorio (GNOME, KDE, etc.) o una VM.-YND-También se puede usar WSL (Windows Subsystem for Linux) mediante la apliación 'Ubuntu', pero se <b>recomienda</b> un entorno con escritorio.-YND--YND-¡Se recomienda descomprimir el archivo en el escritorio!"
     },
     {
         "id": 5,
         "title": "Antiguo Portfolio",
-        "logo":"",
-        "logoAlt": "",
+        "logo":"TODO",
+        "logoAlt": "TODO ",
         "body": "Antiguo Portfolio, hecho mediante HTML, CSS y JS puro, sin ningún framework y todo a mano, por algún motivo que ya no se editará, el CSS se ha roto.",
         "lang": "Castellano",
         "href":"projects/5",
         "github": "https://github.com/olavma/old-portfolio",
         "play": "https://olavma.github.io/old-portfolio/"
+    },
+    {
+        "id": 6,
+        "title": "Proyecto Final SMIX M04 en C#",
+        "logo": "TODO",
+        "logoAlt": "Logo del Proyecto Final del Modulo 4 de SMIX en C#",
+        "body": "Proyecto Final de S.O en Linea pero modificado para funcionar en C#, fue hecho a principios de Grado Superior en DAMv",
+        "lang": "TODO",
+        "href": "projects/6",
+        "github": "TODO",
+        "play": "TODO",
+        "instructions": "TODO: Windows o Linux no se"
+    },
+    {
+        "id": 7,
+        "title": "CodeBlock for Astro",
+        "logo": "TODO",
+        "logoAlt": "TODO",
+        "body": "Componente de Astro para mostrar codigo y copiar dicho codigo en el portapapeles",
+        "lang": "TODO",
+        "href": "projects/7",
+        "github": "TODO",
+        "example": "examples/codeblock"
+    },
+    {
+        "id": 8,
+        "title": "Página web del Proyecto de Sintesis 2 de SMIX",
+        "logo": "TODO",
+        "logoAlt": "TODO",
+        "body": "Página web del segundo proyecto de sintesis de SMIX, esta basada en la página web del primer proyecto pero modificado. Todo hecho con HTML, CSS y JS puros",
+        "lang": "TODO",
+        "href": "projects/8",
+        "github": "TODO",
+        "play": "TODO: Te envia a una nueva github-page"
+    },
+    {
+        "id": 9,
+        "title": "(Astro) Página web del Proyecto de Sintesis 2 de SMIX",
+        "logo": "TODO",
+        "logoAlt": "TODO",
+        "body": "Página web del segundo proyecto de sintesis de SMIX, pero rehecho con Astro",
+        "lang": "Castellano, Catalán, Ingles, Esperanto",
+        "href": "projects/9",
+        "github": "TODO",
+        "play": "TODO: Te envia a una nueva github-page"
     }
   ]
   
