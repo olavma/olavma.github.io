@@ -1,0 +1,14 @@
+---
+interface Props {
+  basePath: string;
+}
+
+const { basePath = "./" } = Astro.props;
+---
+
+<nav class="instructions center">
+  <a href={`${basePath}`} class="navA">Home</a>
+  <!-- <a href="./curriculum-vitae" class="navA">CV</a> -->
+  <a href={`${basePath}proyectos`} class="navA">Proyectos</a>
+  <a href="mailto:olavma2004@gmail.com" class="navA">Contacto</a>
+</nav>

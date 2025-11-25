@@ -1,5 +1,6 @@
 ---
 import Footer from "../../components/Footer.astro";
+import Navigation from "../../components/Navigation.astro";
 import Layout from "../../layouts/Layout.astro";
 import '../../styles/main.css'
 import '../../styles/navigation.css'
@@ -20,12 +21,8 @@ const code3 = `
 `
 ---
 
-<Layout title="CodeBlock Example">
-    <nav class="instructions center">
-		<a href="../" class="navA">Home</a>
-		<a href="../proyectos" class="navA">Proyectos</a>
-		<a href="mailto:olavma2004@gmail.com" class="navA">Contacto</a>
-	</nav>
+<Layout title="CodeBlock Example" description="Ejemplo de uso del componente CodeBlock">
+    <Navigation basePath='../' />
     <main>
         Example of the usage of CodeBlock:
         <CodeBlock language="Python" code={code} />

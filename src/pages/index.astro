@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import LaboralCard from '../components/LaboralCard.astro';
 import Project from '../components/Project.astro';
+import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/navigation.css'
 import '../styles/main.css'
@@ -10,15 +11,10 @@ import { Image } from 'astro:assets';
 const imageURL = "https://media.licdn.com/dms/image/D4D03AQEX_0h_-0TIiQ/profile-displayphoto-shrink_200_200/0/1685899188120?e=2147483647&v=beta&t=Ez6I5gTODwtQg8NvY36MFotWJ9p4V6GidpnHjRT0V-U"
 ---
 
-<Layout title="Portfolio - Olav Martos Aceña">
-	<nav class="instructions center">
-		<a href="./" class="navA">Home</a>
-		<!-- <a href="./curriculum-vitae" class="navA">CV</a> -->
-		<a href="./proyectos" class="navA">Proyectos</a>
-		<a href="mailto:olavma2004@gmail.com" class="navA">Contacto</a>
-	</nav>
+<Layout title="Portfolio - Olav Martos Aceña" description='Contrata a Olav. Desarrollador de Videojuegos'>
+	<Navigation basePath='./' />
 	<main>
-		<Image class="face" src={imageURL} alt="Profile Picture" width={600} height={400} />
+		<Image class="face" src={imageURL} alt="Profile" width={600} height={400} />
 		<p class="instructions">
 			Hey, mi nombre es <strong>Olav Martos Aceña</strong>
 			<br />

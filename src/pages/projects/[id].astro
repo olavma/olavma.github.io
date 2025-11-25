@@ -3,6 +3,7 @@ import Layout from "../../layouts/Layout.astro";
 import '../../styles/main.css';
 import '../../styles/navigation.css';
 import '../../styles/project.css';
+import Navigation from "../../components/Navigation.astro";
 import Footer from '../../components/Footer.astro';
 import projects from '../../data/projects.json';
 
@@ -15,12 +16,8 @@ export function getStaticPaths() {
 const { id } = Astro.params;
 const project = projects.find(p => String(p.id) === id);
 ---
-<Layout title={project ? project.title : "Proyecto no definido"}>
-    <nav class="instructions center">
-		<a href="../" class="navA">Home</a>
-		<a href="../proyectos" class="navA">Proyectos</a>
-		<a href="mailto:olavma2004@gmail.com" class="navA">Contacto</a>
-	</nav>
+<Layout title={project ? project.title : "Proyecto no definido"} description={project ? "Proyecto: " + project.title : "Descripción no definida"}>
+    <Navigation basePath='../' />
     <main>
         {project ? (
             <section id="proyecto">
@@ -30,7 +27,7 @@ const project = projects.find(p => String(p.id) === id);
                 </figure>
                 <article class="sinopsis">
                     <h4>Sinopsis</h4>
-                    <p>{project.body}</p>
+                    <p id="full-body" set:html={project.bodyProject}></p>
                 </article>
                 {project.instructions && (
                     <article class="sinopsis">
@@ -58,8 +55,26 @@ const project = projects.find(p => String(p.id) === id);
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
+        getFullBody();
         getInstructions();
     })
+
+    function getFullBody() {
+        const fullBody = document.getElementById("full-body");
+        const text = fullBody?.innerHTML;
+        const paras = text?.split('-YND-');
+
+        if(fullBody && paras) {
+            fullBody.innerHTML = '';
+            paras.forEach(para => {
+                const p = document.createElement('p');
+                p.innerHTML = para;
+                fullBody.appendChild(p);
+            });
+        } else {
+            console.error('Element with id "full-body" not found')
+        }
+    }
 
     function getInstructions() {
         const instructions = document.getElementById("instructions");
