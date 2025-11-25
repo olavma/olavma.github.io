@@ -91,12 +91,22 @@
         "id": 9,
         "title": "(Astro) Página web del Proyecto de Sintesis 2 de SMIX",
         "logo": "https://raw.githubusercontent.com/olavma/Resources/refs/heads/main/Portfolio/astro.svg",
-        "logoAlt": "TODO",
+        "logoAlt": "Pagina del Proyecto 2 de Sintensis rehecha con Astro",
         "body": "Página web del segundo proyecto de sintesis de SMIX, pero rehecho con Astro y con VSCode",
         "lang": "Castellano, Catalán, Ingles, Esperanto",
         "href": "projects/9",
         "github": "TODO",
         "play": "TODO: Te envia a una nueva github-page"
+    },
+    {
+        "id": 10,
+        "title": "(Gradio) App para Sumar/Restar Horas y Minutos",
+        "logo": "https://raw.githubusercontent.com/olavma/Resources/refs/heads/main/Portfolio/gradio-color.webp",
+        "logoAlt": "Apliación de Python y Gradio.",
+        "body": "Aplicación de Python y Gradio subida a Hugging Face (privado) para sumar/restar horas y minutos y así ayudar a contabilizar el tiempo contado por un script de Cronometro escrito en C#",
+        "lang": "Castellano",
+        "href": "projects/10",
+        "example": "/examples/gradio"
     }
   ]
   

@@ -1,0 +1,24 @@
+---
+import Footer from "../../components/Footer.astro";
+import Layout from "../../layouts/Layout.astro";
+import '../../styles/main.css'
+import '../../styles/navigation.css'
+
+import { Image } from 'astro:assets';
+const imageURL = "https://raw.githubusercontent.com/olavma/Resources/refs/heads/main/Portfolio/gradio_app.webp"
+---
+
+<Layout title="Gradio App">
+    <nav class="instructions center">
+        <a href="../" class="navA">Home</a>
+        <a href="../proyectos" class="navA">Proyectos</a>
+        <a href="mailto:olavma2004@gmail.com" class="navA">Contacto</a>
+    </nav>
+    <main>
+        <p>Esta app hecha con Python y Gradio se encuentra publicada en un Space de Hugging Face privado, pero eso es cosa mia.</p>
+        <p>Esta aplicación fue hecha como soporte para un script de C# llamado Cronometro, que al terminar su ejecución crea un archivo .txt donde se recolecta la hora de inicio, la de finalización, todas las pausas realizadas...</p>
+        <p>Con ayuda de esta app de Gradio puedo saber cual es el tiempo que ha pasado entre la hora de inicio y la hora de finalización con y sin pausas</p>
+        <Image src={imageURL} alt="Profile Picture" width={1090} height={486} />
+    </main>
+    <Footer />
+</Layout>
