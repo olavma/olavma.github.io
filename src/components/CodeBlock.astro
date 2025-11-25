@@ -1,0 +1,67 @@
+---
+const { language, code } = Astro.props;
+---
+
+<div class="code-block">
+  <span class="codeLang">{language}</span>
+  <hr>
+  <pre><code>{code}</code></pre>
+  <button class="copy-btn">Copy</button>
+</div>
+
+<style>
+  .codeLang {
+    font-weight: bold;
+    background-color: #333333;
+    color: whitesmoke;
+    font-size: 25px;
+    padding: 2% 20% 0% 2%;
+  }
+
+  .code-block {
+    position: relative;
+    background: #323232;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+  }
+  pre {
+    margin: 0;
+    overflow: auto;
+    font-size: 14px;
+  }
+  button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: #0070f3;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  button:active {
+    background: #005bb5;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const copyButton = document.querySelector('.copy-btn') as HTMLButtonElement;
+    copyButton.addEventListener('click', () => {
+      const codeBlock = copyButton.previousElementSibling as HTMLElement;
+      const code = codeBlock.innerText;
+      navigator.clipboard.writeText(code)
+        .then(() => {
+          copyButton.textContent = 'Copied!';
+          setTimeout(() => {
+            copyButton.textContent = 'Copy';
+          }, 2000);
+        })
+        .catch(err => {
+          console.error('Failed to copy!', err);
+        });
+    });
+  });
+</script>

@@ -1,0 +1,47 @@
+---
+import Footer from "../../components/Footer.astro";
+import Layout from "../../layouts/Layout.astro";
+import '../../styles/main.css'
+import '../../styles/navigation.css'
+import CodeBlock from "../../components/CodeBlock.astro"
+
+const code = `
+print("Hello World!")`
+
+const code2 = `
+---
+const code = \`
+INSERT CODE HERE
+\`
+---`
+
+const code3 = `
+<CodeBlock language="programming language" code={code} />
+`
+---
+
+<Layout title="CodeBlock Example">
+    <nav class="instructions center">
+		<a href="../" class="navA">Home</a>
+		<a href="../proyectos" class="navA">Proyectos</a>
+		<a href="mailto:olavma2004@gmail.com" class="navA">Contacto</a>
+	</nav>
+    <main>
+        Example of the usage of CodeBlock:
+        <CodeBlock language="Python" code={code} />
+        <hr>
+        <br>
+        <br>
+        <p>
+            Actual content of the CodeBlock Component for Astro and how to use it.<br />
+            First of all in the top of the astro file between --- --- we need to write a <strong>const</strong> variable that contains the code we will show
+        </p>
+        <CodeBlock language="Javascript" code={code2} />
+        <p>
+            To show it we will use the actual component inside our page
+            
+        </p>
+        <CodeBlock language="Astro" code={code3} />
+    </main>
+    <Footer />
+</Layout>

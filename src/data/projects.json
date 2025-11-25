@@ -34,7 +34,7 @@
     {
         "id": 4,
         "title": "Proyecto Final SMIX M04 - Bash Script",
-        "logo":"TODO",
+        "logo":"https://raw.githubusercontent.com/olavma/Resources/refs/heads/main/Portfolio/bash_icon.webp",
         "logoAlt": "Logo del Proyecto Final del Modulo 4 de SMIX",
         "body": "Proyecto Final para la clase de Sistemas Operativos en Linea realizado para SMIX en primer año de Grado Medio",
         "lang": "TODO",
@@ -46,8 +46,8 @@
     {
         "id": 5,
         "title": "Antiguo Portfolio",
-        "logo":"TODO",
-        "logoAlt": "TODO ",
+        "logo":"https://raw.githubusercontent.com/olavma/Resources/refs/heads/main/Portfolio/favicon.svg",
+        "logoAlt": "Antiguo Portfolio ",
         "body": "Antiguo Portfolio, hecho mediante HTML, CSS y JS puro, sin ningún framework y todo a mano, por algún motivo que ya no se editará, el CSS se ha roto.",
         "lang": "Castellano",
         "href":"projects/5",
@@ -57,7 +57,7 @@
     {
         "id": 6,
         "title": "Proyecto Final SMIX M04 en C#",
-        "logo": "TODO",
+        "logo": "https://raw.githubusercontent.com/olavma/Resources/refs/heads/main/Portfolio/Logo_C_sharp.svg",
         "logoAlt": "Logo del Proyecto Final del Modulo 4 de SMIX en C#",
         "body": "Proyecto Final de S.O en Linea pero modificado para funcionar en C#, fue hecho a principios de Grado Superior en DAMv",
         "lang": "TODO",
@@ -69,19 +69,18 @@
     {
         "id": 7,
         "title": "CodeBlock for Astro",
-        "logo": "TODO",
-        "logoAlt": "TODO",
+        "logo": "https://raw.githubusercontent.com/olavma/Resources/refs/heads/main/Portfolio/astro.svg",
+        "logoAlt": "CodeBlock Component for Astro",
         "body": "Componente de Astro para mostrar codigo y copiar dicho codigo en el portapapeles",
-        "lang": "TODO",
+        "lang": "Ingles",
         "href": "projects/7",
-        "github": "TODO",
-        "example": "examples/codeblock"
+        "example": "/examples/codeblock"
     },
     {
         "id": 8,
         "title": "Página web del Proyecto de Sintesis 2 de SMIX",
-        "logo": "TODO",
-        "logoAlt": "TODO",
+        "logo": "https://raw.githubusercontent.com/olavma/Resources/refs/heads/main/Portfolio/html_icon.webp",
+        "logoAlt": "Pagina web del Proyecto de Sintesis 2 de SMIX",
         "body": "Página web del segundo proyecto de sintesis de SMIX, esta basada en la página web del primer proyecto pero modificado. Todo hecho con HTML, CSS y JS puros escritos en Geany",
         "lang": "TODO",
         "href": "projects/8",
@@ -91,7 +90,7 @@
     {
         "id": 9,
         "title": "(Astro) Página web del Proyecto de Sintesis 2 de SMIX",
-        "logo": "TODO",
+        "logo": "https://raw.githubusercontent.com/olavma/Resources/refs/heads/main/Portfolio/astro.svg",
         "logoAlt": "TODO",
         "body": "Página web del segundo proyecto de sintesis de SMIX, pero rehecho con Astro y con VSCode",
         "lang": "Castellano, Catalán, Ingles, Esperanto",

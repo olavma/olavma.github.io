@@ -19,6 +19,7 @@ const project = projects.find(p => String(p.id) === id);
     <nav class="instructions center">
 		<a href="../" class="navA">Home</a>
 		<a href="../proyectos" class="navA">Proyectos</a>
+		<a href="mailto:olavma2004@gmail.com" class="navA">Contacto</a>
 	</nav>
     <main>
         {project ? (
@@ -41,8 +42,9 @@ const project = projects.find(p => String(p.id) === id);
                     <h4>Idiomas</h4>
                     <p>Puedes leerlo en: <span id="idioma">{project.lang}</span></p>
                 </article>
-                <a href={project.github} class="astro-button" target="_blank">Más info</a>
+                {project.github && <a href={project.github} class="astro-button" target="_blank">Más info</a>}
                 {project.play && <a href={project.play} class="astro-button">Ver</a>}
+                {project.example && <a href={project.example} class="astro-button">Ver ejemplo</a>}
             </section>
         ) : (
             <section id="proyecto">
@@ -54,7 +56,6 @@ const project = projects.find(p => String(p.id) === id);
     <Footer />
 </Layout>
 
-<!-- <script src="../../scripts/getProject.js"></script> -->
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         getInstructions();
